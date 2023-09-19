@@ -17,8 +17,7 @@ function generateCSV(contacts) {
         contact.address || '',
         format(new Date(contact.createdDate), 'dd/MM/yyyy'),
     ]);
-    const csvContent = `${csvHeaders.join(',')}\n${csvData.map((row) => row.join(',')).join('\n')}`;
-    return csvContent;
+    return `${csvHeaders.join(',')}\n${csvData.map((row) => row.join(',')).join('\n')}`;
 }
 
 function App() {
